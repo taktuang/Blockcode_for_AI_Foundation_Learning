@@ -1,3 +1,10 @@
+# Blockcode for AI foundation learning
+This project is a Blockcode web application for AI foundation learning that consists of
+- Data Science
+- Image Processing
+- Signal Processing
+- Natural Language Processing
+
 ## Getting Started
 
 First, run the development server:
