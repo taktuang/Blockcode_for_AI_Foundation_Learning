@@ -1,0 +1,93 @@
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import "../globals.css";
+import { Inter } from "next/font/google";
+import Logo_img from "public/logo_aiat.png";
+import React, { useEffect, useState } from "react";
+
+const inter = Inter({ subsets: ["latin"] });
+
+const metadata = {
+  title: "Block Code",
+  description: "platform to learn AI",
+};
+
+export default function DataScienceLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  
+  return (
+    
+      <section>
+        <nav className=" border-gray-200 bg-gray-900 fixed w-full z-10 shadow-xl bg-opacity-80 ">
+          {/* <nav className={`fixed w-full z-10 ${ isSticky ? 'bg-white border-gray-200 dark:bg-gray-900 shadow-lg' : 'bg-transparent'}`}> */}
+
+          <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <Link href="/" className="flex items-center">
+              <Image src={Logo_img} width={100} height={70} alt="AIAT Logo" />
+              <span className="ml-10 self-center text-4xl font-semibold whitespace-nowrap text-white">
+                Block Code
+              </span>
+            </Link>
+            <div
+              className="hidden w-full md:block md:w-auto"
+              id="navbar-default"
+            >
+              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-gray-800 md:bg-gray-900 dark:border-gray-700">
+                {/* <li>
+                  <Link
+                    href="/"
+                    className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                    aria-current="page"
+                  >
+                    Home
+                  </Link>
+                </li> */}
+                <li>
+                  <Link
+                    href="/about"
+                    className="block py-2 pl-3 pr-4  rounded md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/Test-page"
+                    className="block py-2 pl-3 pr-4  rounded md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent"
+                  >
+                    Test-feature
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/Test-page1"
+                    className="block py-2 pl-3 pr-4  rounded md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent"
+                  >
+                    Test-feature1
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/Test-page2"
+                    className="block py-2 pl-3 pr-4  rounded md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent"
+                  >
+                    Test-feature2
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <hr />
+        <div className="container mx-auto max-w-screen-2xl px-4 mt-20">
+          {children}
+        </div>
+        </section>
+      
+    
+  );
+}
