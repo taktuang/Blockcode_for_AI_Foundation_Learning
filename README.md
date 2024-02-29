@@ -6,6 +6,13 @@ This project is a Blockcode web application for AI foundation learning that cons
 - Natural Language Processing
 
 ## Getting Started
+### Installation
+Go to Blockcode_for_AI_Foundation_Learning folder ```cd Blockcode_for_AI_Foundation_Learning folder```
+
+```bash
+npm install
+npm install react react-dom next
+```
 
 First, run the development server:
 ```bash
@@ -18,7 +25,7 @@ pnpm dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## install additional
+### install additional
 
 ```read csv file
 npm install csvtojson
